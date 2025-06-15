@@ -3,6 +3,11 @@ spring:
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PWD}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   jpa:
     database: postgresql
     show-sql: true
@@ -12,5 +17,12 @@ spring:
     properties:
       hibernate:
         format_sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 server:
   port: 8083
+app:
+  message: "Hello Sairam your order is waiting for pickup"

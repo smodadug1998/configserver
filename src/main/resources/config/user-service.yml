@@ -3,6 +3,18 @@ spring:
     mongodb:
       uri: ${MONGO_URI}
       database: ${MONGO_DB}
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 server:
   port: 8082
+app:
+  message: "Hello Sairam welcome to home page"
