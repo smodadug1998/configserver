@@ -1,13 +1,16 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/order_db
-    username: sairam
-    password: Rjsa@7790
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PWD}
   jpa:
     database: postgresql
     show-sql: true
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
 server:
   port: 8083
