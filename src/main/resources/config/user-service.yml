@@ -21,9 +21,9 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instance-id: ${spring.application.name}:${server.port}
     metadata-map:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      instanceId: ${spring.application.name}:${server.port}
 server:
   port: 8082
 logging:
